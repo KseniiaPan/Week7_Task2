@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+@import './vars';
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin headline-font($size, $color) {
+    font-size: $size;
+    color: $color;
+    font-weight: 500;
+    line-height: 110%; 
+    font-family: $font;
+}
+
+@mixin font($size, $weight, $color) {
+    font-family: $font;
+    line-height: normal;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin button($width, $height) {
+    display: inline-flex;
+    max-width: $width;
+    max-height: $height;
+    padding: 20px 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #598D66;
+    cursor: pointer;
+    @include font (20px, 500, $text-secondcolor);
+}
+
+
+%country-button {
+    padding: 10px 20px;
+    max-width: 135px;
+    max-height: 43px;
+    border-radius: 20px;
+    background: #D4E8D9;
+    cursor: pointer;
+    @include font (20px, 500, $text-firstcolor);
+}
+
+
+%card {
+    background-color: $primary-backgroundcolor;
+    padding: 20px;
+.card-image_container {
+    max-width: 310px;
+    max-height: 422px;
+    margin-bottom: 20px;
+.card-image {
+    width: 100%;
+}
+}
+.painting-author {
+    @include font(18px, 500, $text-thirdcolor);
+    margin-bottom: 10px;
+}
+.painting-name {
+    @include font(30px, 500, $text-firstcolor);
+    margin-bottom: 8px;
+}
+.painting-description {
+    @include font(18px, 500, $text-firstcolor);
+    margin-bottom: 30px;
+}
+.painting-price {
+    @include font(24px, 500, $text-secondcolor);
+    margin-bottom: 20px;
+}
+.button {
+    @include button(310px, 65px);
+    margin-bottom: 20px;
+}
+}

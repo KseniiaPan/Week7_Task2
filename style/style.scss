@@ -1,0 +1,331 @@
+@import './template';
+@import './vars';
+
+
+.header{
+    width: 100%;
+    background-color: $primary-backgroundcolor;
+.header_container {
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 61px;
+    grid-template-rows: 1fr;
+    padding-top: 33px;
+ 
+    @media screen and (max-width: 1439px) {
+            min-height: 100px;
+            display: grid;
+            grid-template-columns: 1fr 61px;
+            grid-template-rows: 1fr 1fr;
+            padding-top: 33px; 
+        }
+    @media screen and (max-width: 509px) {
+                min-height: 100px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                padding-top: 33px;}
+    }
+}
+.logo {
+    @media screen and (max-width: 1439px) {
+            grid-row: 1/2;
+            grid-column: 1/3;
+            display: flex;
+            justify-content: center; 
+        }
+        @media screen and (max-width: 509px) {
+                grid-row: 1/2;
+                grid-column: 1/3;
+                display: flex;
+                justify-content: center;
+        }
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+.logo__img {
+    margin-right: 7px;
+    width: 35px;
+    height: 35px;
+}
+.logo__name {
+    @include font (20px, 700, $text-secondcolor)
+}
+}
+.navigation {
+    @media screen and (max-width: 1439px) {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            justify-items: stretch;
+    }
+    @media screen and (max-width: 509px) {
+        display: none;
+    }
+    grid-row: 1/2;
+    grid-column: 2/4;
+    justify-items: stretch;
+    @include font (20px, 500, $text-firstcolor);
+    a {
+        margin-right: 60px;
+        text-decoration: none;
+    }
+        :last-child {
+            margin-right: 0px;
+        }
+    }
+    .burger-menu {
+        @media screen and (max-width: 1439px) {
+            display: none;
+        }
+        @media screen and (max-width: 509px) {
+            display: grid;
+                grid-row: 2/3;
+                grid-column: 1/2;
+                justify-self: start;
+                width: 30px;
+                height: 30px;
+        }
+        display: none;
+    }
+    .cart_img {
+        @media screen and (max-width: 1439px) {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            width: 22px;
+            height: 22px;
+        }
+        @media screen and (max-width: 509px) {
+                grid-row: 2/3;
+                grid-column: 2/3;
+                width: 22px;
+                height: 22px;
+                justify-self: end;
+}
+        grid-row: 1/2;
+        grid-column: 4/5;
+        width: 22px;
+        height: 22px;
+
+}
+
+    .main_title {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        margin-bottom: 82px;
+
+    .main-title_image-container{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        min-height: 621px;
+    .main-title_image {
+        width: 100%;
+        }
+    }
+    .main-title_info {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        text-align: left;
+        align-self: center;
+        .main-title_headline-1 {
+            @include headline-font(60px, $text-firstcolor);
+        }
+        .main-title_headline-2 {
+            @include headline-font(60px, $text-secondcolor);
+        }
+        .main-title_advantages {
+            @include font(18px, 500, $text-thirdcolor);
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+        .button {
+            @include button(227px, 65px);
+        }
+        }
+    }
+    .main_content {
+            display: grid;
+            min-height: 44px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+    .main-content_headline {
+        @include headline-font(40px, $text-firstcolor);
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .country-buttons {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        justify-self: end;
+    .country-button {
+        margin-right: 32px;
+        @extend %country-button;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    }
+}
+    .main-content_cards {
+        margin-top: 30px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-rows: repeat(2, 730px);
+        gap: 30px;
+    
+    .card_1 {
+        @extend %card;
+    }
+    .card_2 {
+        @extend %card;
+    }
+    .card_3 {
+        @extend %card;
+    }
+    .card_4 {
+        @extend %card;
+    }
+    .card_5 {
+        @extend %card;
+    }
+    .card_5 {
+        @extend %card;
+
+
+    }
+    .card_6 {
+        @extend %card;
+    }
+    }
+    .new-collection {
+        width: 100%;
+        background-image: url("../assets/new_collection.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 574px;
+        
+    
+    .new-collection_container {
+        padding-top: 70px;
+        max-width: 540px;
+        max-height: 574px;
+        display: grid;
+        grid-template-columns: minmax(80px, 1fr) 5fr;
+        grid-template-rows: repeat(4, 1fr);
+        color: white;
+        
+
+    .new-collection_star-container {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        max-width: 80px;
+        max-height: 80px;
+
+        .new-collection_star {
+            width: 100%;
+            }
+
+    }
+    .new-collection_headline {
+        grid-row: 1/2;
+        grid-column: 2/6;
+        @include headline-font(40px, white);
+        padding-left: 20px;
+    }
+    
+    .new-collection_info1 {
+        grid-row: 2/3;
+        grid-column: 1/6;
+        padding: 20px 0 20px 0;
+        @include font(18px, 500, white);
+        line-height: 150%;
+    }
+    .new-collection_info2 {
+        grid-row: 3/4;
+        grid-column: 1/6;
+        @include font(18px, 500, white);
+        line-height: 150%;
+    }
+    .new-collection_button {
+        grid-column: 1/6;
+        grid-row: 4/5;
+        margin: 60px 0 70px 0;
+        @include button(257px, 65px);
+        background: #EEDB6D;
+        color: $text-firstcolor;
+    }
+}
+    }
+    .footer{
+        width: 100%;
+        background-color: $primary-backgroundcolor;
+
+        .footer-container {
+        display: grid;
+        grid-template-columns: minmax(170px, 1fr) repeat(5, 1fr);
+        padding-top: 23px;
+        padding-bottom: 23px;
+        gap: 60px;
+        .logo {
+            grid-column: 1/2;
+            grid-row: 1/2; 
+            display: flex;
+            .logo__img {
+                margin-right: 7px;
+                width: 35px;
+                height: 35px;
+            }
+            .logo__name {
+                @include font (20px, 700, $text-secondcolor)
+            }
+            }
+        }
+        .phone-number {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            @include font(20px, 500, $text-firstcolor);
+        }
+        .footer-navigation_1 {
+            grid-column: 2/3;
+            grid-row: 1/3;
+            @include font(20px, 500, $text-firstcolor);
+            justify-self: start;
+        }
+        .footer-navigation_2 {
+            grid-column: 3/4;
+            grid-row: 1/3;
+            @include font(20px, 500, $text-firstcolor);
+            justify-self: start;
+        }
+        .footer-navigation_3 {
+            grid-column: 4/5;
+            grid-row: 1/3;
+            @include font(20px, 500, $text-firstcolor);
+            justify-self: start;
+        }
+            .footer-navigation_items {
+                display: flex;
+                justify-content: left;
+                justify-items: center;
+                @include font(18px, 500, $text-thirdcolor);
+                text-decoration: none;
+                line-height: 150%; 
+            }
+        .social-networks {
+            grid-column: 6/7;
+            grid-row: 1/2;
+            display: flex;
+
+        .social-networks_icon {
+            margin-right: 30px;
+        }
+       
+    }
+        .rights {
+            grid-column: 6/7;
+            grid-row: 2/3;
+        }
+        }
+    
